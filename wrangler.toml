@@ -1,0 +1,82 @@
+name = "openshortlink"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+
+# D1 Database
+# Note: database_id does NOT support environment variable substitution
+# You must hardcode your actual database ID here (get it from: wrangler d1 list)
+# This ID is not considered highly sensitive as it requires account access to use
+[[d1_databases]]
+binding = "DB"
+database_name = "openshortlink-db"
+database_id = "442fef39-21bd-4cb5-be06-1d54b99d169e"  # Replace with your actual database ID
+
+
+# KV Namespace
+# Note: id and preview_id do NOT support environment variable substitution
+# You must hardcode your actual KV namespace IDs here (get them from: wrangler kv:namespace list)
+[[kv_namespaces]]
+binding = "CACHE"
+id = "0331dd2339e349d9adc95c9f186f8dbd"  # Replace with your actual KV namespace ID
+preview_id = ""  # Replace with your actual KV preview ID
+
+
+# Analytics Engine
+[[analytics_engine_datasets]]
+binding = "ANALYTICS"
+dataset = "openshortlink-analytics"
+
+
+# Environment variables
+[vars]
+ENVIRONMENT = "production"
+LOG_LEVEL = "info"
+CACHE_TTL = "604800"
+MAX_LINKS_PER_DOMAIN = "10000"
+
+# Rate limiting configuration
+# For development/testing: use shorter windows (60 seconds)
+# For production: use longer windows (7200 seconds = 2 hours) for security
+FAILED_AUTH_LIMIT = "5"      # Max failed authentication attempts before blocking
+FAILED_AUTH_WINDOW = "7200"    # Time window in seconds (60 = 1 minute for dev/test)
+
+
+# Security & API Secrets:
+# For one-click deploy: Values are prompted from .dev.vars.example
+# For local development: Copy .dev.vars.example to .dev.vars and fill in values
+# For production: Use "wrangler secret put SETUP_TOKEN" etc.
+#
+# Required secrets:
+#   SETUP_TOKEN - Generated with: openssl rand -hex 32
+#   CLOUDFLARE_ACCOUNT_ID - Your Cloudflare account ID
+#   CLOUDFLARE_API_TOKEN - API token with "Account Analytics Read" permission
+
+
+
+
+
+# Cron triggers for scheduled tasks
+# Daily tasks (midnight UTC): analytics aggregation and top 100 status check
+# Status check every 6 hours: regular link status monitoring
+[triggers]
+crons = ["0 0 * * *", "0 */6 * * *"]
+
+# Observability configuration
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+head_sampling_rate = 1
+
+[placement]
+mode = "smart"
+

@@ -1,0 +1,5 @@
+"destination_url","slug","us","UK","united_states_url","new-zealand-link","southkorea","hongkongurl","mobile","desktop_link","tablet-url"
+"https://example.com/edge1","edge-test-1","https://example.com/us1","https://example.com/uk1","https://example.com/us2","https://example.com/nz1","https://example.com/kr1","https://example.com/hk1","https://example.com/mobile1","https://example.com/desktop1","https://example.com/tablet1"
+"https://example.com/edge2","edge-test-2","https://example.com/us3","https://example.com/uk3","","https://example.com/nz2","","https://example.com/hk2","https://example.com/mobile2","",""
+"https://example.com/edge3","edge-test-3","","","https://example.com/us4","","https://example.com/kr2","","","https://example.com/desktop2","https://example.com/tablet2"
+

@@ -1,0 +1,5 @@
+"destination_url","slug","title","United States","GB","Canada","South Korea URL","mobile_url","Desktop Link","tablet"
+"https://example.com/default","test-all-patterns","All Pattern Types","https://example.com/us-redirect","https://example.com/gb-redirect","https://example.com/ca-redirect","https://example.com/kr-redirect","https://example.com/mobile-redirect","https://example.com/desktop-redirect","https://example.com/tablet-redirect"
+"https://another.com/default","test-geo-codes","Geo Only (codes)","https://another.com/us-only","https://another.com/gb-only","https://another.com/ca-only","","","",""
+"https://yetanother.com/default","test-device-only","Device Only Link","","","","","https://yetanother.com/mobile-only","","https://yetanother.com/tablet-only"
+"https://fourthexample.com/default","test-mixed-naming","Mixed Naming Styles","https://fourthexample.com/us","","","https://fourthexample.com/kr","","https://fourthexample.com/desktop",""

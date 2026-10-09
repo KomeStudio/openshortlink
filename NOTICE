@@ -1,0 +1,60 @@
+OpenShort.link - Open Source Link Shortener
+Copyright (c) 2025 OpenShort.link Contributors
+
+This product includes software developed by the OpenShort.link project
+(https://openshort.link).
+
+================================================================================
+THIRD-PARTY COMPONENTS
+================================================================================
+
+This software uses the following open-source components:
+
+RUNTIME DEPENDENCIES:
+
+  Hono (MIT License)
+    https://hono.dev
+    Copyright (c) 2022-present Yusuke Wada and Hono contributors
+  
+  OTPAuth (MIT License)
+    https://github.com/hectorm/otpauth
+    Copyright (c) 2021 Héctor Molinero Fernández
+  
+  Zod (MIT License)
+    https://zod.dev
+    Copyright (c) 2020 Colin McDonnell
+  
+  @hono/zod-validator (MIT License)
+    https://github.com/honojs/middleware
+    Copyright (c) 2022-present Yusuke Wada and Hono contributors
+
+DEVELOPMENT DEPENDENCIES:
+
+  TypeScript (Apache-2.0 License)
+    https://www.typescriptlang.org
+    Copyright (c) Microsoft Corporation
+    For TypeScript third-party notices, see: 
+    node_modules/typescript/ThirdPartyNoticeText.txt
+  
+  Cloudflare Wrangler (MIT/Apache-2.0)
+    https://github.com/cloudflare/workers-sdk
+    Copyright (c) Cloudflare, Inc.
+  
+  ESLint (MIT License)
+    https://eslint.org
+    Copyright OpenJS Foundation and ESLint contributors
+  
+  Prettier (MIT License)
+    https://prettier.io
+    Copyright (c) James Long and contributors
+  
+  Vitest (MIT License)
+    https://vitest.dev
+    Copyright (c) 2021-present vitest contributors
+
+All third-party components retain their original licenses and copyrights.
+See node_modules/ directory for full license texts of dependencies.
+
+================================================================================
+
+For complete license terms, see the LICENSE file in the root directory.
