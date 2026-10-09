@@ -438,28 +438,440 @@ function renderBrandedRootPage(domainName: string): string {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${safeDomain}</title>
-  <style>
-    body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); color: #fff; }
-    .card { text-align: center; padding: 2.5rem; max-width: 480px; }
-    h1 { font-size: 2rem; margin: 0 0 0.5rem; }
-    p { opacity: 0.85; line-height: 1.6; margin: 0.5rem 0; }
-    .domain { font-weight: 600; }
-    .footer { margin-top: 2rem; font-size: 0.8rem; opacity: 0.6; }
-    a { color: #fff; }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Kome.top — Simple, Smart &amp; Shareable Links | URL Shortener by Kome Studio</title>
+
+<meta name="description" content="Kome.top is a simple URL shortener by Kome Studio. Shorten links, share smarter — clean, branded short links for social media, blogs, products, and campaigns." />
+<meta name="keywords" content="kome.top, 2.kome.top, komestudio, Kome Studio, URL shortener, short link, branded short links, share smarter, shorten links" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0b0f17" />
+<link rel="canonical" href="https://2.kome.top/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Kome.top — Simple, Smart &amp; Shareable Links" />
+<meta property="og:description" content="Shorten links. Share smarter. A simple URL shortener by Kome Studio." />
+<meta property="og:url" content="https://2.kome.top/" />
+<meta property="og:site_name" content="Kome Studio" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Kome.top — Simple, Smart &amp; Shareable Links" />
+<meta name="twitter:description" content="Shorten links. Share smarter. A simple URL shortener by Kome Studio." />
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%97%3C/text%3E%3C/svg%3E" />
+
+<style>
+  :root {
+    --bg: #0b0f17;
+    --bg-soft: #111827;
+    --card: #151b26;
+    --border: #232b3a;
+    --text: #e6e9ef;
+    --muted: #9aa4b2;
+    --accent: #4f8cff;
+    --accent-2: #7c5cff;
+    --radius: 14px;
+    --max: 900px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, sans-serif;
+    background: radial-gradient(1200px 600px at 50% -10%, #16203a 0%, var(--bg) 60%);
+    color: var(--text);
+    line-height: 1.65;
+    min-height: 100vh;
+    padding: 32px 20px 80px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: var(--max); margin: 0 auto; }
+
+  header.hero {
+    text-align: center;
+    padding: 40px 0 32px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 40px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(79,140,255,.1);
+    border: 1px solid rgba(79,140,255,.3);
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+    font-weight: 600;
+  }
+  h1 {
+    font-size: clamp(1.7rem, 4.4vw, 2.6rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -.01em;
+    background: linear-gradient(90deg, #fff 0%, #b9c6ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 12px;
+  }
+  .tagline {
+    font-size: 1.15rem;
+    color: #c8d4ff;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .lede {
+    font-size: 1.02rem;
+    color: var(--muted);
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .lede a { color: var(--accent); text-decoration: none; }
+  .lede a:hover { text-decoration: underline; }
+
+  .card {
+    background: linear-gradient(180deg, var(--card) 0%, var(--bg-soft) 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 26px 28px;
+    margin-bottom: 22px;
+  }
+  .card h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .card h2 .ico {
+    display: inline-flex;
+    width: 26px; height: 26px;
+    align-items: center; justify-content: center;
+    background: rgba(79,140,255,.15);
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  .card p { color: var(--muted); margin-bottom: 10px; }
+  .card p:last-child { margin-bottom: 0; }
+  .card a { color: var(--accent); text-decoration: none; }
+  .card a:hover { text-decoration: underline; }
+
+  ol, ul { padding-left: 20px; color: var(--muted); }
+  ol li, ul li { margin-bottom: 8px; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+    background: rgba(255,255,255,.06);
+    border: 1px solid var(--border);
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: .9em;
+    color: #c8d4ff;
+  }
+  strong { color: var(--text); }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+  .feature {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .feature .emoji { font-size: 22px; display: block; margin-bottom: 8px; }
+  .feature h3 { font-size: 1rem; color: #fff; margin-bottom: 6px; font-weight: 700; }
+  .feature p { font-size: .92rem; color: var(--muted); margin: 0; }
+
+  .faq details {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+  }
+  .faq details[open] { border-color: rgba(79,140,255,.4); }
+  .faq summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: "+";
+    font-size: 1.3rem;
+    color: var(--accent);
+    transition: transform .2s;
+  }
+  .faq details[open] summary::after { content: "−"; }
+  .faq details p { margin-top: 10px; color: var(--muted); }
+
+  .cta {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(79,140,255,.15), rgba(124,92,255,.15));
+    border: 1px solid rgba(79,140,255,.35);
+    border-radius: var(--radius);
+    padding: 34px 24px;
+    margin-top: 30px;
+  }
+  .cta h2 { font-size: 1.3rem; margin-bottom: 8px; color: #fff; }
+  .cta p { color: var(--muted); margin-bottom: 18px; }
+  .btn {
+    display: inline-block;
+    padding: 12px 26px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    color: #fff !important;
+    font-weight: 700;
+    border-radius: 10px;
+    text-decoration: none !important;
+    transition: transform .15s, box-shadow .15s;
+    box-shadow: 0 8px 24px rgba(79,140,255,.25);
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(79,140,255,.4); }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: .85rem;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--accent); }
+</style>
+
+<!-- Structured data: WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Kome.top",
+  "alternateName": ["2.kome.top", "Kome Studio URL Shortener"],
+  "url": "https://2.kome.top/",
+  "description": "Kome.top is a simple URL shortener by Kome Studio. Shorten links, share smarter with clean, branded short links.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kome Studio",
+    "url": "https://komestudio.com",
+    "sameAs": ["https://komestudio.com", "https://kome.top"]
+  }
+}
+</script>
+
+<!-- Structured data: FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Kome.top?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kome.top is a simple URL shortener by Kome Studio. It turns long URLs into short, clean, and shareable links for social media, blogs, products, and campaigns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Kome.top safe to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Kome.top and its subdomain 2.kome.top are official Kome Studio services. Short links redirect only to trusted destinations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is Kome.top for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kome.top is useful for content creators, bloggers, marketers, entrepreneurs, and anyone who wants to share long URLs in a cleaner format."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What other domains does Kome Studio use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kome Studio operates komestudio.com and kome.top, along with subdomains such as 2.kome.top, go.kome.top, and dl.kome.top."
+      }
+    }
+  ]
+}
+</script>
 </head>
+
 <body>
-  <div class="card">
-    <h1>🔗 ${safeDomain}</h1>
-    <p>This is a URL shortener powered by <span class="domain">OpenShort.link</span>.</p>
-    <p>Short links on this domain redirect to their destinations. There's nothing to see here.</p>
-    <div class="footer">Powered by <a href="https://openshort.link" rel="noopener noreferrer">OpenShort.link</a></div>
-  </div>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="badge">🔗 URL Shortener by Kome Studio</span>
+    <h1>Kome.top — Simple, Smart &amp; Shareable Links</h1>
+    <p class="tagline">Shorten links. Share smarter.</p>
+    <p class="lede">
+      <strong>Kome.top</strong> is a simple URL shortener by
+      <a href="https://komestudio.com" title="Kome Studio official website">Kome Studio</a>,
+      designed to make long URLs shorter, cleaner, and easier to share.
+      Whether you're sharing on social media, publishing blog posts,
+      promoting products, or managing links for your business, Kome.top helps
+      you create concise links that are easier to remember and use.
+    </p>
+  </header>
+
+  <section class="grid">
+    <div class="feature">
+      <span class="emoji">✂️</span>
+      <h3>Short &amp; Clean Links</h3>
+      <p>Turn long URLs into compact links that are easy to share.</p>
+    </div>
+    <div class="feature">
+      <span class="emoji">📤</span>
+      <h3>Easy to Share</h3>
+      <p>Use short links in posts, messages, emails, and campaigns.</p>
+    </div>
+    <div class="feature">
+      <span class="emoji">🏷️</span>
+      <h3>Branded Domain</h3>
+      <p>Share links using the Kome.top domain for a consistent presence.</p>
+    </div>
+    <div class="feature">
+      <span class="emoji">⚡</span>
+      <h3>Convenient Access</h3>
+      <p>Redirect visitors to the original destination through a short link.</p>
+    </div>
+    <div class="feature">
+      <span class="emoji">🛠️</span>
+      <h3>Built for Everyday Use</h3>
+      <p>Simple and practical for creators, personal projects, and businesses.</p>
+    </div>
+    <div class="feature">
+      <span class="emoji">🛡️</span>
+      <h3>Safe &amp; Official</h3>
+      <p>Operated by Kome Studio on trusted infrastructure.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2><span class="ico">👥</span> Who Is Kome.top For?</h2>
+    <p>
+      Kome.top is useful for content creators, bloggers, marketers,
+      entrepreneurs, and anyone who wants to share long URLs in a cleaner format.
+    </p>
+    <p>
+      Use short links for social media profiles, articles, product pages,
+      campaign materials, and other online resources.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2><span class="ico">⚙️</span> How it works</h2>
+    <ol>
+      <li>A short link such as <code>2.kome.top/abc123</code> is created.</li>
+      <li>When you open it, the service looks up the destination.</li>
+      <li>You are redirected instantly to the original page.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2><span class="ico">🏢</span> Powered by Kome Studio</h2>
+    <p>
+      Kome.top is part of the <strong>Kome Studio</strong> ecosystem, focused on
+      building useful digital tools and products that make everyday online
+      tasks simpler.
+    </p>
+    <p>
+      Our goal is to create practical tools that help individuals and businesses
+      work smarter, share content more efficiently, and grow their digital
+      presence. Visit
+      <a href="https://komestudio.com">komestudio.com</a>
+      to explore more digital projects and tools.
+    </p>
+  </section>
+
+  <section class="card faq">
+    <h2><span class="ico">❓</span> Frequently asked questions</h2>
+
+    <details open>
+      <summary>What is Kome.top?</summary>
+      <p>
+        Kome.top is a simple URL shortener by Kome Studio. It turns long URLs
+        into short, clean, and shareable links for social media, blogs,
+        products, and campaigns.
+      </p>
+    </details>
+
+    <details>
+      <summary>Is Kome.top safe to use?</summary>
+      <p>
+        Yes. Kome.top and its subdomain <strong>2.kome.top</strong> are official
+        Kome Studio services. Short links redirect only to trusted destinations.
+      </p>
+    </details>
+
+    <details>
+      <summary>Why did a link send me to 2.kome.top?</summary>
+      <p>
+        You were redirected here because the short link is either being resolved
+        or the destination is unavailable. Try again in a moment, or visit
+        <a href="https://komestudio.com">komestudio.com</a> directly.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can I create my own short link?</summary>
+      <p>
+        Short links are managed by Kome Studio. Visit
+        <a href="https://komestudio.com">komestudio.com</a> for official
+        information and support.
+      </p>
+    </details>
+
+    <details>
+      <summary>What other domains does Kome Studio use?</summary>
+      <p>
+        Kome Studio operates <strong>komestudio.com</strong> and
+        <strong>kome.top</strong>, along with subdomains such as
+        <strong>2.kome.top</strong>, <strong>go.kome.top</strong>, and
+        <strong>dl.kome.top</strong>.
+      </p>
+    </details>
+  </section>
+
+  <section class="cta">
+    <h2>Make every link easier to share with Kome.top.</h2>
+    <p>Visit Kome Studio to explore more digital projects and tools.</p>
+    <a class="btn" href="https://komestudio.com">Visit Kome Studio →</a>
+  </section>
+
+  <footer>
+    <p>
+      © Kome Studio. All rights reserved. ·
+      <a href="https://komestudio.com">komestudio.com</a> ·
+      <a href="https://kome.top">kome.top</a> ·
+      <a href="https://2.kome.top">2.kome.top</a>
+    </p>
+    <p style="margin-top:6px;">
+      Short links on 2.kome.top redirect to their destinations.
+    </p>
+  </footer>
+
+</div>
 </body>
 </html>`;
 }
