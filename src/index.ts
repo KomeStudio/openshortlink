@@ -441,7 +441,7 @@ function renderBrandedRootPage(domainName: string): string {
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Kome.top — Simple, Smart &amp; Shareable Links | URL Shortener by Kome Studio</title>
+<title>Kome.top URL Shortener by Kome Studio</title>
 
 <meta name="description" content="Kome.top is a simple URL shortener by Kome Studio. Shorten links, share smarter — clean, branded short links for social media, blogs, products, and campaigns." />
 <meta name="keywords" content="kome.top, 2.kome.top, komestudio, Kome Studio, URL shortener, short link, branded short links, share smarter, shorten links" />
@@ -722,7 +722,7 @@ function renderBrandedRootPage(domainName: string): string {
 
   <header class="hero">
     <span class="badge">🔗 URL Shortener by Kome Studio</span>
-    <h1>Kome.top — Simple, Smart &amp; Shareable Links</h1>
+    <h1>Kome.top Simple Smart Shareable Links</h1>
     <p class="tagline">Shorten links. Share smarter.</p>
     <p class="lede">
       <strong>Kome.top</strong> is a simple URL shortener by
