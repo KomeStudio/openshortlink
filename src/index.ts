@@ -462,7 +462,9 @@ function renderBrandedRootPage(domainName: string): string {
 <meta name="twitter:description" content="Shorten links. Share smarter. A simple URL shortener by Kome Studio." />
 
 <!-- Favicon -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%97%3C/text%3E%3C/svg%3E" />
+<!-- <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%97%3C/text%3E%3C/svg%3E" /> -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23FABB05' d='M511.98 252.94A256 256 0 1 0 480.52 378.98A257 257 0 0 1 228.07 285.98A423 423 0 0 0 511.98 252.94Z'/%3E%3Ccircle cx='281' cy='141' r='49' fill='%23EA4A3B'/%3E%3C/svg%3E" />
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23FABB05' d='M511.98 252.94A256 256 0 1 0 480.52 378.98A257 257 0 0 1 228.07 285.98A423 423 0 0 0 511.98 252.94Z'/%3E%3Ccircle cx='281' cy='141' r='49' fill='%23EA4A3B'/%3E%3C/svg%3E" />
 
 <style>
   :root {
