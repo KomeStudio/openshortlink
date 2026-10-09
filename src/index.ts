@@ -444,16 +444,16 @@ function renderBrandedRootPage(domainName: string): string {
 <title>Kome.top URL Shortener by Kome Studio</title>
 
 <meta name="description" content="Kome.top is a simple URL shortener by Kome Studio. Shorten links, share smarter — clean, branded short links for social media, blogs, products, and campaigns." />
-<meta name="keywords" content="kome.top, 2.kome.top, komestudio, Kome Studio, URL shortener, short link, branded short links, share smarter, shorten links" />
+<meta name="keywords" content="kome.top, go.kome.top, komestudio, Kome Studio, URL shortener, short link, branded short links, share smarter, shorten links" />
 <meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#0b0f17" />
-<link rel="canonical" href="https://2.kome.top/" />
+<link rel="canonical" href="https://go.kome.top/" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Kome.top — Simple, Smart &amp; Shareable Links" />
 <meta property="og:description" content="Shorten links. Share smarter. A simple URL shortener by Kome Studio." />
-<meta property="og:url" content="https://2.kome.top/" />
+<meta property="og:url" content="https://go.kome.top/" />
 <meta property="og:site_name" content="Kome Studio" />
 
 <!-- Twitter -->
@@ -664,8 +664,8 @@ function renderBrandedRootPage(domainName: string): string {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Kome.top",
-  "alternateName": ["2.kome.top", "Kome Studio URL Shortener"],
-  "url": "https://2.kome.top/",
+  "alternateName": ["go.kome.top", "Kome Studio URL Shortener"],
+  "url": "https://go.kome.top/",
   "description": "Kome.top is a simple URL shortener by Kome Studio. Shorten links, share smarter with clean, branded short links.",
   "publisher": {
     "@type": "Organization",
@@ -695,7 +695,7 @@ function renderBrandedRootPage(domainName: string): string {
       "name": "Is Kome.top safe to use?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Kome.top and its subdomain 2.kome.top are official Kome Studio services. Short links redirect only to trusted destinations."
+        "text": "Yes. Kome.top and its subdomain go.kome.top are official Kome Studio services. Short links redirect only to trusted destinations."
       }
     },
     {
@@ -711,7 +711,7 @@ function renderBrandedRootPage(domainName: string): string {
       "name": "What other domains does Kome Studio use?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Kome Studio operates komestudio.com and kome.top, along with subdomains such as 2.kome.top, go.kome.top, and dl.kome.top."
+        "text": "Kome Studio operates komestudio.com and kome.top, along with subdomains such as go.kome.top, go.kome.top, and dl.kome.top."
       }
     }
   ]
@@ -784,7 +784,7 @@ function renderBrandedRootPage(domainName: string): string {
   <section class="card">
     <h2><span class="ico">⚙️</span> How it works</h2>
     <ol>
-      <li>A short link such as <code>2.kome.top/abc123</code> is created.</li>
+      <li>A short link such as <code>go.kome.top/abc123</code> is created.</li>
       <li>When you open it, the service looks up the destination.</li>
       <li>You are redirected instantly to the original page.</li>
     </ol>
@@ -821,13 +821,13 @@ function renderBrandedRootPage(domainName: string): string {
     <details>
       <summary>Is Kome.top safe to use?</summary>
       <p>
-        Yes. Kome.top and its subdomain <strong>2.kome.top</strong> are official
+        Yes. Kome.top and its subdomain <strong>go.kome.top</strong> are official
         Kome Studio services. Short links redirect only to trusted destinations.
       </p>
     </details>
 
     <details>
-      <summary>Why did a link send me to 2.kome.top?</summary>
+      <summary>Why did a link send me to go.kome.top?</summary>
       <p>
         You were redirected here because the short link is either being resolved
         or the destination is unavailable. Try again in a moment, or visit
@@ -849,8 +849,7 @@ function renderBrandedRootPage(domainName: string): string {
       <p>
         Kome Studio operates <strong>komestudio.com</strong> and
         <strong>kome.top</strong>, along with subdomains such as
-        <strong>2.kome.top</strong>, <strong>go.kome.top</strong>, and
-        <strong>dl.kome.top</strong>.
+        <strong>go.kome.top</strong>, and <strong>dl.kome.top</strong>.
       </p>
     </details>
   </section>
@@ -866,10 +865,10 @@ function renderBrandedRootPage(domainName: string): string {
       © Kome Studio. All rights reserved. ·
       <a href="https://komestudio.com">komestudio.com</a> ·
       <a href="https://kome.top">kome.top</a> ·
-      <a href="https://2.kome.top">2.kome.top</a>
+      <a href="https://go.kome.top">go.kome.top</a>
     </p>
     <p style="margin-top:6px;">
-      Short links on 2.kome.top redirect to their destinations.
+      Short links on go.kome.top redirect to their destinations.
     </p>
   </footer>
 
