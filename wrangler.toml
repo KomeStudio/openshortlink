@@ -54,9 +54,6 @@ FAILED_AUTH_WINDOW = "7200"    # Time window in seconds (60 = 1 minute for dev/t
 #   CLOUDFLARE_API_TOKEN - API token with "Account Analytics Read" permission
 
 
-
-
-
 # Cron triggers for scheduled tasks
 # Daily tasks (midnight UTC): analytics aggregation and top 100 status check
 # Status check every 6 hours: regular link status monitoring
@@ -67,15 +64,21 @@ crons = ["0 0 * * *", "0 */6 * * *"]
 [observability]
 enabled = false
 head_sampling_rate = 1
+redact_query_string = false
 
 [observability.logs]
 enabled = true
 head_sampling_rate = 1
 invocation_logs = true
+persist = true
 
 [observability.traces]
-enabled = false
+enabled = true
 head_sampling_rate = 1
+persist = true
+
+[observability.issues]
+enabled = true
 
 [placement]
 mode = "smart"
