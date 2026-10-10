@@ -1,8 +1,6 @@
 /**
  * Copyright (c) 2025 OpenShort.link Contributors
- *
  * Licensed under the GNU Affero General Public License Version 3 (AGPL-3.0)
- * See LICENSE file or https://www.gnu.org/licenses/agpl-3.0.txt
  */
 
 // Renders an HTML preview page with Open Graph / Twitter Card tags for social crawlers.
