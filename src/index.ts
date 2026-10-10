@@ -865,7 +865,7 @@ function renderBrandedRootPage(domainName: string): string {
       © Kome Studio. All rights reserved. ·
       <a href="https://komestudio.com">komestudio.com</a> ·
       <a href="https://kome.top">kome.top</a> ·
-      <a href="https://go.kome.top">go.kome.top</a>
+      <a href="https://go.kome.top/dashboard">go.kome.top</a>
     </p>
     <p style="margin-top:6px;">
       Short links on go.kome.top redirect to their destinations.
