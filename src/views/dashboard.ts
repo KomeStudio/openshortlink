@@ -33,7 +33,7 @@ export function dashboardHtml(csrfToken: string, nonce: string): string {
 <body>
   <div id="app">
     <nav class="navbar">
-      <div class="nav-brand"><a href="https://openshort.link/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0; line-height: 0;"><img src="${LOGO_DATA_URI}" alt="OpenShort.link" style="height: 120px; width: auto; display: block; margin: 0; padding: 0; vertical-align: top;" /></a></div>
+      <div class="nav-brand"><a href="https://komestudio.com/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0; line-height: 0;"><img src="${LOGO_DATA_URI}" alt="OpenShort.link" style="height: 120px; width: auto; display: block; margin: 0; padding: 0; vertical-align: top;" /></a></div>
       <div class="nav-items">
         <select id="domain-selector" class="domain-selector">
           <option value="">Select Domain</option>
