@@ -37,7 +37,7 @@ export const loginHtml = (csrfToken: string, nonce: string) => html`<!DOCTYPE ht
 </head>
 <body>
   <div class="login-container">
-    <h1><a href="https://openshort.link/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><img src="${raw(LOGO_DATA_URI)}" alt="OpenShort.link" style="height: 160px; width: auto;" /></a></h1>
+    <h1><a href="https://KomeStudio.com/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><img src="${raw(LOGO_DATA_URI)}" alt="KomeStudio" style="height: 160px; width: auto;" /></a></h1>
     <form id="login-form">
       <input type="hidden" id="csrf-token" name="_csrf" value="${csrfToken}">
       <div class="form-group">
