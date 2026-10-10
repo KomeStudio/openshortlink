@@ -1,8 +1,6 @@
 /**
  * Copyright (c) 2025 OpenShort.link Contributors
- *
  * Licensed under the GNU Affero General Public License Version 3 (AGPL-3.0)
- * See LICENSE file or https://www.gnu.org/licenses/agpl-3.0.txt
  */
 
 import { html } from '../utils/html';
@@ -17,9 +15,10 @@ export function dashboardHtml(csrfToken: string, nonce: string): string {
   <meta charset="UTF-8">
   <meta name="csrf-token" content="${csrfToken}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OpenShort.link - Dashboard</title>
+  <title>Kome Shorten URL Dashboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%97%3C/text%3E%3C/svg%3E" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" nonce="${nonce}"></script>
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js" nonce="${nonce}"></script>
@@ -33,7 +32,7 @@ export function dashboardHtml(csrfToken: string, nonce: string): string {
 <body>
   <div id="app">
     <nav class="navbar">
-      <div class="nav-brand"><a href="https://komestudio.com/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0; line-height: 0;"><img src="${LOGO_DATA_URI}" alt="OpenShort.link" style="height: 120px; width: auto; display: block; margin: 0; padding: 0; vertical-align: top;" /></a></div>
+      <div class="nav-brand"><a href="https://komestudio.com/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0; line-height: 0;"><img src="${LOGO_DATA_URI}" alt="Kome Studio Logo" style="height: 120px; width: auto; display: block; margin: 0; padding: 0; vertical-align: top;" /></a></div>
       <div class="nav-items">
         <select id="domain-selector" class="domain-selector">
           <option value="">Select Domain</option>
