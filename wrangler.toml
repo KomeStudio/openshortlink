@@ -11,7 +11,7 @@ compatibility_flags = ["nodejs_compat"]
 [[d1_databases]]
 binding = "DB"
 database_name = "openshortlink-db"
-database_id = "442fef39-21bd-4cb5-be06-1d54b99d169e"  # Replace with your actual database ID
+database_id = "72c399fd-f020-49da-a5d9-8aa5966b78d1"  # Replace with your actual database ID
 
 
 # KV Namespace
@@ -19,7 +19,7 @@ database_id = "442fef39-21bd-4cb5-be06-1d54b99d169e"  # Replace with your actual
 # You must hardcode your actual KV namespace IDs here (get them from: wrangler kv:namespace list)
 [[kv_namespaces]]
 binding = "CACHE"
-id = "0331dd2339e349d9adc95c9f186f8dbd"  # Replace with your actual KV namespace ID
+id = "864ceb95705b47688708b06909dab9ca"  # Replace with your actual KV namespace ID
 preview_id = ""  # Replace with your actual KV preview ID
 
 
