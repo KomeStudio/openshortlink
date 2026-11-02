@@ -8,6 +8,7 @@ compatibility_flags = ["nodejs_compat"]
 # Note: database_id does NOT support environment variable substitution
 # You must hardcode your actual database ID here (get it from: wrangler d1 list)
 # This ID is not considered highly sensitive as it requires account access to use
+# npx wrangler d1 migrations apply openshortlink-db --remote && npx wrangler deploy
 [[d1_databases]]
 binding = "DB"
 database_name = "openshortlink-db"
